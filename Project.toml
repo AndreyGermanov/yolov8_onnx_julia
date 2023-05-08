@@ -1,0 +1,9 @@
+name = "object_detector"
+uuid = "b9e343ce-eb5f-4c8d-8d9c-fb39edffe1b0"
+authors = ["Andrey Germanov <andrey@germanov.dev>"]
+version = "0.1.0"
+
+[deps]
+Genie = "c43c736e-a2d1-11e8-161f-af95117fbd1e"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
+ONNXRunTime = "e034b28e-924e-41b2-b98f-d2bbeb830c6a"
