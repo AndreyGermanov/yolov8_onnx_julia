@@ -93,7 +93,7 @@ end
 # Each box should be provided in a format:
 # [x1,y1,x2,y2,object_class,probability]
 function iou(box1,box2)
-    return intersect(box1,box2) / union(box1,box2)
+    return intersection(box1,box2) / union(box1,box2)
 end
 
 # Calculates union area of two boxes
@@ -104,13 +104,13 @@ function union(box1,box2)
     box2_x1,box2_y1,box2_x2,box2_y2 = box2[1:4]
     box1_area = (box1_x2-box1_x1)*(box1_y2-box1_y1)
     box2_area = (box2_x2-box2_x1)*(box2_y2-box2_y1)
-    return box1_area + box2_area - intersect(box1,box2)
+    return box1_area + box2_area - intersection(box1,box2)
 end
 
 # Calculates intersection area of two boxes
 # Each box should be provided in a format:
 # [x1,y1,x2,y2,object_class,probability]
-function intersect(box1,box2)
+function intersection(box1,box2)
     box1_x1,box1_y1,box1_x2,box1_y2 = box1[1:4]
     box2_x1,box2_y1,box2_x2,box2_y2 = box2[1:4]
     x1 = max(box1_x1,box2_x1)
